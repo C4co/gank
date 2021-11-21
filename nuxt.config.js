@@ -1,6 +1,12 @@
+require('dotenv').config()
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+
+  env: {
+    API_KEY: process.env.API_KEY
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -44,7 +50,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'https://api.rawg.io/api/'
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
