@@ -16,8 +16,6 @@ export default Vue.extend({
   async fetch(){
     try {
       this.platform = await this.$axios.$get(`/platforms/${this.$route.params.id}`, game)
-
-      console.log(this.platform)
     } catch (error) {
       return this.$nuxt.error({ statusCode: 404, message: 'Page not found' })
     }
