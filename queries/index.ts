@@ -23,6 +23,30 @@ export const last30Days = (page: number = 1) => {
   }
 }
 
+export const bestOfTheYear = (page: number = 1, year: number = 2020) => {
+  return {
+    params: {
+      key: process.env.API_KEY,
+      discover: true,
+      ordering: '-added',
+      page_size: 40,
+      page: page,
+      year: year
+    }
+  }
+}
+
+export const allTimeTop = (page: number = 1) => {
+  return {
+    params: {
+      key: process.env.API_KEY,
+      discover: true,
+      page_size: 40,
+      page: page
+    }
+  }
+}
+
 export const calendar = (page: number = 1) => {
   return {
     params: {
@@ -46,8 +70,12 @@ export const genres = {
   }
 }
 
-export const platforms = {
-  params: {
-    key: process.env.API_KEY
+export const platforms = (page: number = 1) => {
+  return {
+    params: {
+      key: process.env.API_KEY,
+      page: page,
+      page_size: 40
+    }
   }
 }
