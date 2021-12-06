@@ -52,7 +52,7 @@ export const calendar = (page: number = 1) => {
     params: {
       key: process.env.API_KEY,
       popular: true,
-      page: 1,
+      page: page,
       page_size: 40
     }
   }
@@ -66,7 +66,18 @@ export const game = {
 
 export const genres = {
   params: {
-    key: process.env.API_KEY
+    key: process.env.API_KEY,
+    page_size: 40
+  }
+}
+
+export const genreGames = (page: number = 1) => {
+  return {
+    params: {
+      key: process.env.API_KEY,
+      page_size: 40,
+      page: page
+    }
   }
 }
 
