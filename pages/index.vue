@@ -60,6 +60,8 @@ export default Vue.extend({
     <div class="menu">
       <NuxtLink to="/platforms"> Platforms </NuxtLink>
       <br>
+      <NuxtLink to="/genres"> Genres </NuxtLink>
+      <br>
       <NuxtLink to="/calendar/2021/10"> Calendário 2021/10 </NuxtLink>
       <br>
       <NuxtLink to="top/all-time"> Bests of all time </NuxtLink>
